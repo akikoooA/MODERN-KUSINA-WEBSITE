@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+     <title>Modern Kusina - International Cuisine: A World of Flavor on Your Plate.</title>
+    <link rel="icon" href="MK Logo Design (1).png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <link rel="stylesheet" href="Main.css" />
     <title>Modern Kusina - Recipe Sharing</title>
-       <link rel="stylesheet" href="Main.css" />
+        <link rel="stylesheet" href="Main.css" />
     <style>
+        /* Your existing styles remain unchanged */
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f5f5f5;
@@ -14,8 +16,6 @@
             margin: 0;
             padding: 0;
         }
-
-        
 
         .container {
             max-width: 1200px;
@@ -184,7 +184,6 @@
             margin-bottom: 1rem;
         }
 
-        /* Non-copyable text styles */
         .recipe-description {
             color: #444;
             line-height: 1.6;
@@ -443,18 +442,16 @@
     </footer>
 
     <script>
+        // Load recipes when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            loadRecipes();
+        });
+
+        // Image upload preview
         const fileInput = document.getElementById('fileInput');
         const imagePreviewContainer = document.getElementById('imagePreviewContainer');
         const imagePreview = document.getElementById('imagePreview');
         const imagePreviewText = document.querySelector('.image-preview-text');
-        const uploadButton = document.getElementById('uploadButton');
-        const authorNameInput = document.getElementById('authorName');
-        const emailInput = document.getElementById('email');
-        const recipeTitleInput = document.getElementById('recipeTitle');
-        const recipeDescriptionInput = document.getElementById('recipeDescription');
-        const recipeInstructionsInput = document.getElementById('recipeInstructions');
-        const recipesContainer = document.getElementById('recipesContainer');
-        const noRecipesElement = document.getElementById('noRecipes');
 
         imagePreviewContainer.addEventListener('click', () => {
             fileInput.click();
@@ -473,16 +470,14 @@
             }
         });
 
-        document.addEventListener('DOMContentLoaded', () => {
-            loadRecipes();
-        });
-
+        // Recipe submission
+        const uploadButton = document.getElementById('uploadButton');
         uploadButton.addEventListener('click', () => {
-            const authorName = authorNameInput.value.trim();
-            const email = emailInput.value.trim();
-            const recipeTitle = recipeTitleInput.value.trim();
-            const recipeDescription = recipeDescriptionInput.value.trim();
-            const recipeInstructions = recipeInstructionsInput.value.trim();
+            const authorName = document.getElementById('authorName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const recipeTitle = document.getElementById('recipeTitle').value.trim();
+            const recipeDescription = document.getElementById('recipeDescription').value.trim();
+            const recipeInstructions = document.getElementById('recipeInstructions').value.trim();
             const recipeImage = imagePreview.src;
 
             if (!authorName || !recipeTitle || !recipeDescription || !recipeImage) {
@@ -501,23 +496,23 @@
                 date: new Date().toISOString()
             };
 
-            saveRecipe(recipe);
+            // Save to localStorage
+            const recipes = JSON.parse(localStorage.getItem('recipes') || '[]');
+            recipes.unshift(recipe);
+            localStorage.setItem('recipes', JSON.stringify(recipes));
+
+            // Reset form
             resetForm();
+            // Reload recipes
             loadRecipes();
         });
 
-        function saveRecipe(recipe) {
-            let recipes = JSON.parse(localStorage.getItem('recipes') || '[]');
-            recipes.unshift(recipe);
-            localStorage.setItem('recipes', JSON.stringify(recipes));
-        }
-
         function resetForm() {
-            authorNameInput.value = '';
-            emailInput.value = '';
-            recipeTitleInput.value = '';
-            recipeDescriptionInput.value = '';
-            recipeInstructionsInput.value = '';
+            document.getElementById('authorName').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('recipeTitle').value = '';
+            document.getElementById('recipeDescription').value = '';
+            document.getElementById('recipeInstructions').value = '';
             imagePreview.src = '';
             imagePreview.style.display = 'none';
             imagePreviewText.style.display = 'block';
@@ -525,40 +520,32 @@
 
         function loadRecipes() {
             const recipes = JSON.parse(localStorage.getItem('recipes') || '[]');
-            
+            const recipesContainer = document.getElementById('recipesContainer');
+            const noRecipesElement = document.getElementById('noRecipes');
+
             if (recipes.length === 0) {
                 noRecipesElement.style.display = 'block';
+                recipesContainer.innerHTML = noRecipesElement.outerHTML;
                 return;
             }
 
             noRecipesElement.style.display = 'none';
-            recipesContainer.innerHTML = '';
-            
-            recipes.forEach(recipe => {
-                const recipeCard = createRecipeCard(recipe);
-                recipesContainer.appendChild(recipeCard);
-            });
-        }
-
-        function createRecipeCard(recipe) {
-            const card = document.createElement('div');
-            card.className = 'recipe-card';
-            
-            card.innerHTML = `
-                <div class="recipe-content">
-                    <div class="recipe-image" style="background-image: url('${recipe.image}')"></div>
-                    <div class="recipe-details">
-                        <h3 class="recipe-title">${recipe.title}</h3>
-                        <p class="recipe-author">By: ${recipe.author}</p>
-                        ${recipe.email ? `<p class="recipe-email">Email: ${recipe.email}</p>` : ''}
-                        <p class="recipe-description">${recipe.description}</p>
-                        <div class="recipe-instructions">
-                            <p>${recipe.instructions}</p>
+            recipesContainer.innerHTML = recipes.map(recipe => `
+                <div class="recipe-card">
+                    <div class="recipe-content">
+                        <div class="recipe-image" style="background-image: url('${recipe.image}')"></div>
+                        <div class="recipe-details">
+                            <h3 class="recipe-title">${recipe.title}</h3>
+                            <p class="recipe-author">By: ${recipe.author}</p>
+                            ${recipe.email ? `<p class="recipe-email">Email: ${recipe.email}</p>` : ''}
+                            <p class="recipe-description">${recipe.description}</p>
+                            <div class="recipe-instructions">
+                                <p>${recipe.instructions}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            `;
-            return card;
+            `).join('');
         }
     </script>
 </body>
