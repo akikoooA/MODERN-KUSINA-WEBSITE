@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Modern Kusina - International Cuisine: A World of Flavor on Your Plate.</title>
+    <link rel="icon" href="MK Logo Design (1).png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="Main.css">
+    
+    <style>
+       body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 30px 0;
+    border-top: 1px solid #222;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 30px;
+    align-items: start;
+    text-align: left;
+}
+
+.footer h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 0 0 25px 0;
+    line-height: 1.7;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: #ddd;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    font-size: 0.9rem;
+}
+
+.social-links-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    gap: 15px;
+}
+
+.social-links-vertical h2 {
+    margin-bottom: 10px;
+}
+
+.facebook-link {
+    display: flex;
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center icon and text horizontally within the link */
+    text-align: center; /* Center the text below the icon */
+}
+
+.facebook-link img {
+    margin-bottom: 5px; /* Add some space between the icon and text */
+    width: 24px; /* Added width for consistency if used elsewhere */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.facebook-link a {
+    text-decoration: none; /* Remove underline from the link */
+    color: #fff; /* Added color for the link */
+}
+
+.facebook-link a:hover {
+    opacity: 0.7; /* Added hover effect for consistency */
+}
+
+.copyright-and-policies {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #222;
+}
+
+.copyright-and-policies p {
+    margin: 0;
+    text-align: center;
+    flex: 1 0 auto;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.copyright-and-policies .footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Center links on smaller screens */
+    gap: 30px;
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+    .footer > div {
+        margin-bottom: 30px;
+    }
+    .copyright-and-policies {
+        flex-direction: column;
+    }
+    .copyright-and-policies .footer-links {
+        margin-left: 0;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
+</head>
+<body>
+    <header class="navbar">
+         <div class="logo">Modern Kusina</div>
+        <nav class="nav-links">
+            <a href="mainwebsite.html">International Foods</a>
+            <a href="aboutus.html">About us</a>
+            <a href="Recipes.html">Recipes</a>
+            <a href="membership.html" class="membership-link">Membership</a>
+          <a href="Comments.html" >Kitchen Confessions</a>
+          <a href="recipeshare.html" >Share Your Recipe </a>
+        </nav>
+    </header>
+
+
+    <div style="background-color: #222; color: #fff; text-align: center; padding: 50px;">
+ <h1 style="margin-bottom: 5px; font-size: 3.5em; font-family: Arial, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: bold;">About Modern Kusina</h1>
+  <p style="font-size: 1.2em; font-style: italic;">Bringing Global Flavors To Your Kitchen</p>
+</div>
+
+
+<section style="padding: 20px; font-family: sans-serif; color: #666; text-align: center;">
+  <h2 style="font-size: 2em; color: #222; margin-bottom: 15px; font-weight: bold;">Our Story</h2>
+  <div style="text-align: left; display: inline-block;">
+    <p style="line-height: 1.6; margin-bottom: 10px;">
+      Modern Kusina began with a simple idea to make international cuisine accessible to home cooks everywhere.<br>
+      Founded in 2020 by a group of passionate food enthusiasts, our platform has grown into a community of culinary<br>
+      explorers sharing authentic recipes from around the world.
+    </p>
+    <p style="line-height: 1.6; margin-bottom: 10px;">
+      The word "Kusina" comes from the Filipino word for "kitchen" - a place where families gather, traditions are<br>
+      passed down, and memories are made. We believe that food is a universal language that connects cultures and<br>
+      brings people together.
+    </p>
+    <p style="line-height: 1.6;">
+      Our mission is to inspire home cooks to step out of their comfort zones and experience the rich diversity of global<br>
+      cuisine. We strive to provide reliable, tested recipes that honor traditional techniques while adapting them for<br>
+      the modern kitchen.
+    </p>
+  </div>
+</section>
+
+
+<div style="display: flex; justify-content: center; gap: 40px; padding: 20px; font-family: sans-serif; color: #666; text-align: center;">
+  <section style="max-width: 400px;">
+    <h2 style="font-size: 1.5em; color: #333; margin-bottom: 10px; font-weight: bold;">Our Mission</h2>
+    <p style="line-height: 1.7; font-size: 0.9em; text-align: left; margin-bottom: 15px;">
+      To make international cuisine accessible to everyone by providing authentic, easy-to-follow recipes that celebrate cultural diversity through food.
+    </p>
+  </section>
+  <section style="max-width: 400px;">
+    <h2 style="font-size: 1.5em; color: #333; margin-bottom: 10px; font-weight: bold;">Our Vision</h2>
+    <p style="line-height: 1.7; font-size: 0.9em; text-align: left;">
+      A world where cooking becomes a journey of cultural exploration, bringing people together through shared culinary experiences.
+    </p>
+  </section>
+</div>
+
+
+
+    
+
+
+    <section style="padding: 20px; font-family: sans-serif; color: #333; text-align: center;">
+  <h2 style="font-size: 2em; color: #222; margin-bottom: 20px; font-weight: bold;">Meet Our Team</h2>
+
+  <!-- First row -->
+  <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 40px;">
+    <div style="width: 300px;">
+      <img src="1.png" alt="Scot Gerik P. Zamora" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+      <h3 style="font-size: 1.2em; color: #222; margin-bottom: 5px;">Scot Gerik P. Zamora</h3>
+      <p style="color: #d64161; font-size: 0.9em; margin-bottom: 5px;">Chief Executive Officer, Main Coder, Designer</p>
+      <p style="font-size: 0.85em; line-height: 1.4;">Leads website vision, combines passion for Filipino cuisine with technical expertise.</p>
+    </div>
+    <div style="width: 300px;">
+      <img src="2.png" alt="Nicole C. Castro" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+      <h3 style="font-size: 1.2em; color: #222; margin-bottom: 5px;">Nicole C. Castro</h3>
+      <p style="color: #d64161; font-size: 0.9em; margin-bottom: 5px;">Chief Operating Officer</p>
+      <p style="font-size: 0.85em; line-height: 1.4;">Manages daily operations, coordinates teams, and optimizes processes.</p>
+    </div>
+    <div style="width: 300px;">
+      <img src="3.png" alt="Drew Matthew S. Ambayec" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+      <h3 style="font-size: 1.2em; color: #222; margin-bottom: 5px;">Drew Matthew S. Ambayec</h3>
+      <p style="color: #d64161; font-size: 0.9em; margin-bottom: 5px;">Chief Technology Officer</p>
+      <p style="font-size: 0.85em; line-height: 1.4;">Leads technological development and ensures smooth website and app function.</p>
+    </div>
+  </div>
+
+  <!-- Second row -->
+  <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+    <div style="width: 300px;">
+      <img src="4.png" alt="Rodzil Jhon Resubal" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+      <h3 style="font-size: 1.2em; color: #222; margin-bottom: 5px;">Rodzil Jhon Resubal</h3>
+      <p style="color: #d64161; font-size: 0.9em; margin-bottom: 5px;">Marketing Manager</p>
+      <p style="font-size: 0.85em; line-height: 1.4;">Collaborates on website integration of marketing aspects and expands web presence.</p>
+    </div>
+    <div style="width: 300px;">
+      <img src="5.png" alt="Mark G. Dig" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+      <h3 style="font-size: 1.2em; color: #222; margin-bottom: 5px;">Mark G. Dig</h3>
+      <p style="color: #d64161; font-size: 0.9em; margin-bottom: 5px;">Community Relations Manager</p>
+      <p style="font-size: 0.85em; line-height: 1.4;">Builds and maintains connections with our audience.</p>
+    </div>
+    <div style="width: 300px;">
+      <img src="6.png" alt="Abril A. Guevarra" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;">
+      <h3 style="font-size: 1.2em; color: #222; margin-bottom: 5px;">Abril A. Guevarra</h3>
+      <p style="color: #d64161; font-size: 0.9em; margin-bottom: 5px;">Content Creator</p>
+      <p style="font-size: 0.85em; line-height: 1.4;">Develops engaging content, including recipe highlights and cooking tips.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding: 40px 20px; font-family: sans-serif; color: #333; text-align: center;">
+  <h2 style="font-size: 2.2em; color: #222; margin-bottom: 15px; font-weight: bold;">Join Our Culinary Adventure</h2>
+  <p style="line-height: 1.7; font-size: 1em; margin-bottom: 30px;">
+    Modern Kusina is more than just a recipe website  it's a community of food lovers exploring the world through<br>
+    cooking. Whether you're a seasoned chef or just starting your culinary journey, we invite you to join us.
+  </p>
+  <div>
+    <a href="membership.html" style="display: inline-block; background-color: #d64161; color: #fff; padding: 12px 24px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-right: 20px;">Become a Member</a>
+    <a href="recipeshare.html" style="color: #333; text-decoration: none;">Share Your Recipe</a>
+  </div>
+</section>
+
+
+
+
+
+        
+
+       
+<footer class="footer">
+    <div class="social-links-vertical">
+        <h2>Follow Us</h2>
+        <div class="facebook-link">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/30px-2021_Facebook_icon.svg.png" alt="Facebook Logo">
+            <a href="https://www.facebook.com/profile.php?id=61575825275200" target="_blank" rel="noopener noreferrer"></a>
+        </div>
+        <h2>Support</h2>
+    </div>
+    <div class="footer-links">
+        <h2> Explore</h2>
+        <a href="#">Recipes</a>
+        <a href="#">Categories</a>
+        <a href="#">Popular Cuisines</a>
+        <a href="#">Cooking Tips</a>
+        <a href="#">Kitchen Confessions</a>
+    </div>
+    <div class="footer-links">
+        <h2> Membership</h2>
+        <a href="#">Join Now</a>
+        <a href="#">Membership Benefits</a>
+        <a href="#">Pricing Plans</a>
+        <a href="#">Gift Membership</a>
+        <a href="#">FAQ</a>
+    </div>
+    <div class="contact-info">
+        <h2>Modern Kusina</h2>
+        <p>Bringing global flavors to your kitchen with authentic, <br>
+            easy-to-follow recipes from around the world.</p>
+    </div>
+    <div class="copyright-and-policies">
+        <p>© 2025 Modern Kusina. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
